@@ -10,5 +10,6 @@ def get_ip():
     return ip_addr
 
 mylcd = I2C_LCD_driver.lcd()
+ip_addr = get_ip()
 
-mylcd.lcd_display_string("Hello World!", 1)
+mylcd.lcd_display_string(ip_addr, 1)
