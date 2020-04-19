@@ -1,6 +1,8 @@
-sudo nano /etc/rc.local
+> crontab -e
+and add the below entry
 
-and add below just before exit 0
+*/3 * * * *  /home/pi/cron/LCD.sh
 
-sleep 10
-/usr/bin/python3 /home/pi/git/RaspberryIIOT/LCD/DisplayIP.py
+then restart the cron
+
+> sudo systemctl restart cron.service
